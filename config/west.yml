@@ -1,11 +1,16 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url_base: https://github.com/zmkfirmware
+    # 1. Add the module remote
+    - name: infely
+      url_base: https://github.com/infely
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
-  self:
-    path: config
+    # 2. Add the custom battery display module
+    - name: nice-view-battery
+      remote: infely
+      revision: main

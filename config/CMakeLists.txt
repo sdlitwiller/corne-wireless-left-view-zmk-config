@@ -1,6 +1,4 @@
 if(CONFIG_ZMK_DISPLAY)
-  if(CONFIG_NICE_VIEW_WIDGET_STATUS)
-    target_sources(app PRIVATE custom_status_screen.c)
-    target_sources(app PRIVATE widgets/split_status.c)
-  endif()
+  target_sources(app PRIVATE custom_status_screen.c)
+  target_sources(app PRIVATE widgets/lr_battery_widget.c)
 endif()

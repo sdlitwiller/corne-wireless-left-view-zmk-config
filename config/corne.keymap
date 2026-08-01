@@ -9,14 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        behaviors {
-                soft_off: behavior_soft_off {
-                        compatible = "zmk,behavior-soft-off";
-                        #binding-cells = <0>;
-                        hold-time-ms = <5000>;
-                };
-        };
-
         soft_off_wakeup: soft_off_wakeup {
                 compatible = "zmk,soft-off-wakeup-sources";
                 wakeup-sources = <&kscan0>;
@@ -81,4 +73,9 @@
                         status = "reserved";
                 };
         };
+
+};
+
+&soft_off {
+        hold-time-ms = <5000>;
 };

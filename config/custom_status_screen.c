@@ -1,7 +1,8 @@
-#include "widgets/lr_battery_widget.c"
 #include <lvgl.h>
 #include <zephyr/kernel.h>
 #include <zmk/display.h>
+
+#include "widgets/lr_battery_widget.c"
 
 lv_obj_t *zmk_display_status_screen(void) {
   lv_obj_t *screen = lv_obj_create(NULL);

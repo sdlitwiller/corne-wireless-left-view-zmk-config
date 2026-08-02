@@ -8,7 +8,10 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      # Pin to last commit before Zephyr 4.1 (LVGL v9) upgrade which broke nice-view-battery.
+      # nice-view-battery uses LVGL v8 API (LV_IMG_CF_INDEXED_1BIT) incompatible with LVGL v9.
+      # See: https://github.com/infely/nice-view-battery/issues/3
+      revision: abb64ba316c29caddc49727ca2cac2f0ed5970c7
       import: app/west.yml
     # 2. Add the custom battery display module
     - name: nice-view-battery

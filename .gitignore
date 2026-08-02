@@ -1,0 +1,8 @@
+# Local Zephyr/West build artifacts
+.west/
+build/
+zephyr/
+modules/
+zmk/
+optional/
+nice-view-battery/

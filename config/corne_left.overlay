@@ -1,3 +1,5 @@
+#include <input/processors.dtsi>
+
 / {
     split_inputs {
         #address-cells = <1>;
@@ -13,5 +15,6 @@
         compatible = "zmk,input-listener";
         status = "okay";
         device = <&glidepoint_split>;
+        input-processors = <&zip_temp_layer 3 800>;
     };
 };

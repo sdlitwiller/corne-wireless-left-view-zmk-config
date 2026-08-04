@@ -96,7 +96,3 @@
 &soft_off {
         hold-time-ms = <5000>;
 };
-
-&glidepoint_listener {
-        input-processors = <&zip_temp_layer 3 800>;
-};
